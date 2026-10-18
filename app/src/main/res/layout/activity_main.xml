@@ -1,0 +1,69 @@
+
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#10131C"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="16dp"
+            android:text="SNAKE ASSISTANT"
+            android:textColor="#64FFDA"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="24dp"
+            android:text="8 BALL POOL • PRACTICE TOOLS"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/btnGuides"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="AIMING GUIDES: ON" />
+
+        <Button
+            android:id="@+id/btnBank"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="BANK SHOT CALCULATOR" />
+
+        <Button
+            android:id="@+id/btnSpin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SPIN &amp; POWER LAB" />
+
+        <Button
+            android:id="@+id/btnOverlay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ENABLE FLOATING PANEL" />
+
+        <TextView
+            android:id="@+id/txtStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:padding="12dp"
+            android:text="Ready • Practice mode"
+            android:textColor="#64FFDA"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+</ScrollView>
