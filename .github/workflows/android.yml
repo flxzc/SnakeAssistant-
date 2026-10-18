@@ -1,0 +1,44 @@
+
+name: Build SnakeAssistant APK
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up JDK
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Build project
+        run: |
+          mkdir -p app/src/main/java/com/snakeassistant/pool
+          mkdir -p app/src/main/res/layout
+          mkdir -p app/src/main/res/values
+          echo "Android project files will be added next."
+          ls -la
+
+      - name: Save build logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: snakeassistant-build-logs
+          path: .
+          if-no-files-found: ignore
+          
